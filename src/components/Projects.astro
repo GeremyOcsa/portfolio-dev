@@ -7,6 +7,8 @@ import HTML from "../assets/svg/html.svg";
 import JavaScript from "../assets/svg/brand-javascript.svg";
 import Link from "../assets/svg/link.svg";
 import Nodejs from "../assets/svg/brand-nodejs.svg";
+import Project01 from "../assets/projects/pro01.webp";
+import Project02 from "../assets/projects/pro02.webp";
 import Tailwind from "../assets/svg/brand-tailwind.svg";
 
 const TAGS = {
@@ -46,14 +48,14 @@ const PROJECTS = [
   {
     title: "Omegha Constructor - Landing Page",
     description: "Página web de presentación para una empresa constructora.",
-    image: "src/assets/projects/pro01.webp",
+    image: Project01,
     link: "https://omegha-landing-page.vercel.app/es",
     TAGS: [TAGS.TAILWIND, TAGS.ASTRO],
   },
   {
     title: "Clinica Flores - Buscar pacientes",
     description: "Aplicación web para gestionar pacientes en una clínica.",
-    image: "src/assets/projects/pro02.webp",
+    image: Project02,
     github: "https://github.com/GeremyOcsa/back-wallpay",
     TAGS: [TAGS.HTML, TAGS.CSS3, TAGS.JavaScript, TAGS.Nodejs],
   },
@@ -66,7 +68,7 @@ const PROJECTS = [
     {
       PROJECTS.map(({ title, description, image, link, github, TAGS }) => (
         <div class="max-w-md bg-white border-2  rounded-2xl shadow-sm relative card-rounded">
-          <img class="rounded-t-xl" src={image} alt={description} />
+          <img class="rounded-t-xl" src={image.src} alt={description} />
           <div class="p-5">
             <h5 class="mb-2 text-xl! font-bold tracking-tight text-[#330800]">
               {title}
