@@ -1,0 +1,56 @@
+<header class="fixed top-0 z-30 flex items-center justify-center w-full mt-2">
+  <nav class="flex px-3 text-md font-medium rounded-full space-x-4">
+    <a href="#experience">Experiencia</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#about">Sobre mí</a>
+  </nav>
+</header>
+
+<script>
+  let sections = document.querySelectorAll("section");
+  let navLinks = document.querySelectorAll("nav a");
+
+  window.onscroll = () => {
+    sections.forEach((section) => {
+      let top = window.scrollY;
+      let offSet = section.offsetTop - 150;
+      let height = section.offsetHeight;
+      let id = section.getAttribute("id");
+
+      if (top >= offSet && top < offSet + height) {
+        navLinks.forEach((links) => {
+          links.classList.remove("active");
+          const activeLink = document.querySelector(`nav a[href*=${id}]`);
+          if (activeLink) {
+            activeLink.classList.add("active");
+          }
+        });
+      }
+    });
+  };
+</script>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  nav a:hover,
+  nav a.active {
+    color: #ff9580;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+    to {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+    }
+  }
+</style>

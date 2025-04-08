@@ -1,0 +1,35 @@
+---
+import Button from "../components/Button.astro";
+import GitHub from "../assets/svg/github.svg";
+import Lines from "../assets/svg/hero.svg";
+import Linkedin from "../assets/svg/linkedin.svg";
+---
+
+<section class="max-w-4xl w-full mx-auto mt-44">
+  <div class="hero relative">
+    <Lines class="size-12 rotate-180 absolute -top-4 -left-3" />
+    <h1 class="text-5xl lg:text-6xl mb-4 font-bold">Hey, soy Geremy</h1>
+    <p>
+      <strong>Desarrollador Front-End</strong> con más de dos años de experiencia.
+    </p>
+    <p>
+      Interesado en el <strong>diseño UX/UI</strong> y actualmente ampliando mis
+      conocimientos en <strong>Back-End.</strong>
+    </p>
+    <p>
+      Me encanta enfrentar desafíos y <strong
+        >encontrar soluciones creativas a problemas complejos.</strong
+      >
+    </p>
+  </div>
+  <div class="social-links mt-4 space-x-2">
+    <Button href="https://github.com/GeremyOcsa">
+      <GitHub class="mr-1" />
+      GitHub
+    </Button>
+    <Button href="https://www.linkedin.com/in/geremy-ocsa-flores/">
+      <Linkedin class="mr-1" />
+      LinkedIn
+    </Button>
+  </div>
+</section>
